@@ -25,14 +25,14 @@ main(void)
     int unique = 0, next = 0;
     unsigned int i; // iterator
     
-    // Pomysł oparty o XOR () - zakładając, że nie ma więcej niż 2 takich samych elementów
+    // Pomysł oparty o XOR (^) - zakładając, że liczba powtarzających się elementów jest parzysta
     for(i = 0; i < SAMPLE_SIZE; i++)
     {
-        res = GetNext();
-        unique = unique ^ res;
+        next = GetNext();
+        unique = unique ^ next;
     }
     
-    printf("Unique element: %x\n",unique);
+    printf("Unique element: 0x%x\n",unique);
     printf("--END--\n");
     return 0;
 }
